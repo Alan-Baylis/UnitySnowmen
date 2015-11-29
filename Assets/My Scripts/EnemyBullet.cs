@@ -15,7 +15,7 @@ public class EnemyBullet : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		
 		if (other.gameObject.tag == "Player") {
-			print ("player tag");
+			//print ("player tag");
 			GameObject target = other.gameObject;
 			target.SendMessage("decrementPlayerHealth", SendMessageOptions.DontRequireReceiver);
 			Destroy(gameObject);
